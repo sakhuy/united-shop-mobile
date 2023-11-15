@@ -5,6 +5,7 @@ Stateless Widget:
 - Tidak dapat berubah: Widget ini tidak memiliki keadaan (state) internal yang dapat berubah. Artinya, setelah widget dibuat, tampilannya tidak akan berubah.
 - Dipakai untuk komponen statis: Stateless widget cocok untuk menampilkan komponen yang tidak perlu berubah selama siklus hidup aplikasi, seperti teks, gambar, atau ikon statis.
 - Efisien: Stateless widget lebih efisien daripada Stateful widget karena tidak perlu memperbarui tampilan saat keadaan berubah.
+
 Stateful Widget:
 - Dapat berubah: Widget ini memiliki keadaan (state) internal yang dapat berubah. Artinya, tampilan widget dapat diperbarui selama siklus hidup aplikasi.
 - Digunakan untuk komponen dinamis: Stateful widget digunakan ketika kita perlu memperbarui atau merender ulang tampilan sesuai dengan perubahan dalam keadaan atau interaksi pengguna.
