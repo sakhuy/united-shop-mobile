@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:united_squad/screens/list_product.dart';
 import 'package:united_squad/screens/login.dart';
 import 'package:united_squad/screens/shoplist_form.dart';
-import 'package:united_squad/screens/shoplist_page.dart';
+// import 'package:united_squad/screens/shoplist_page.dart';
 
 class ShopItem {
   final String name;
@@ -35,10 +35,6 @@ class ShopCard extends StatelessWidget {
           if (item.name == "Tambah Item") {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const ShopFormPage()));
-          }
-          if (item.name == "Lihat Item") {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => ProductListPage(items: itemList)));
           }
           if (item.name == "Lihat Item") {
             Navigator.push(context,
