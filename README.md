@@ -624,3 +624,15 @@ if (item.name == "Lihat Item") {
                 MaterialPageRoute(builder: (context) => ProductListPage(items: itemList)));
           }
 ~~~
+
+# Tugas 9
+## 1.Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Ya, kita bisa melakukan pengambilan data JSON tanpa membuat model terlebih dahulu. Ini sering disebut sebagai "parsing JSON" atau "deserialization". Di beberapa bahasa pemrograman, seperti Dart (yang digunakan dalam Flutter), kita dapat menggunakan library atau fungsi bawaan untuk mengonversi data JSON menjadi struktur data yang dapat digunakan dalam program. Meskipun membangun model dapat memberikan keuntungan seperti validasi tipe data, terkadang untuk kasus sederhana, pembuatan model mungkin terasa berlebihan.
+## 2.Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.
+CookieRequest sendiri tidak termasuk dalam kelas atau konsep standar di Flutter. Mungkin maksud Anda adalah http.Request yang digunakan untuk membuat permintaan HTTP, termasuk yang melibatkan pengelolaan cookie. Bagian mengapa instance CookieRequest perlu dibagikan ke semua komponen di aplikasi Flutter mungkin tergantung pada arsitektur aplikasi dan bagaimana Anda ingin mengelola sesi atau keadaan yang berkaitan dengan permintaan HTTP dan cookie.
+## 3.Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.
+Mekanisme ini melibatkan langkah-langkah umum seperti membuat permintaan HTTP untuk mendapatkan data JSON dari server menggunakan fungsi seperti http.get di Flutter. Setelah menerima respons, Anda kemudian dapat menggunakan fungsi parsing JSON untuk mengonversi respons tersebut menjadi objek Dart yang dapat digunakan untuk membangun antarmuka pengguna.
+## 4.Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.
+Mekanisme autentikasi ini melibatkan penggunaan protokol otentikasi yang sesuai (seperti OAuth, JWT, atau sesuatu yang disediakan oleh Django) untuk memverifikasi keaslian pengguna. Pengguna di Flutter akan memberikan kredensial (misalnya, nama pengguna dan kata sandi) yang akan dikirimkan ke backend Django melalui permintaan HTTP. Django kemudian akan memproses kredensial tersebut dan memberikan token otentikasi jika kredensial valid. Token ini kemudian dapat disimpan di Flutter dan digunakan untuk otorisasi saat membuat permintaan ke endpoint yang memerlukan otentikasi.
+
+Setelah autentikasi berhasil, menu dapat diambil dari server Django sebagai respons dari permintaan yang diautentikasi. Data ini kemudian dapat diolah dan ditampilkan di antarmuka pengguna Flutter.
